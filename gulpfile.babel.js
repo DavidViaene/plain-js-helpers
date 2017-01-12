@@ -5,7 +5,7 @@ import buffer from 'vinyl-buffer'
 import uglify from 'gulp-uglify'
 
 gulp.task('default', () => {
-    const b = browserify({entries: 'src/index.js', debug: false})
+    const b = browserify({entries: 'src/index.js', debug: true})
     b.transform('babelify', {presets: ['latest', 'stage-2']})
 
     return b.bundle()

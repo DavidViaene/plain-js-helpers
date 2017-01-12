@@ -1,6 +1,6 @@
 {
   "name": "plain-js-helpers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Plain javascript helper functions",
   "main": "dist/index.js",
   "repository": "git@github.com:DavidViaene/plain-js-helpers.git",
