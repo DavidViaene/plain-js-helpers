@@ -46,7 +46,7 @@ export const addClass = (el, className) => {
 
 export const removeClass = (el, className) => {
     if (el.classList)
-        el.classList.remove(className);
+        el.classList.remove(className)
     else
         el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ')
 
@@ -60,11 +60,11 @@ export const removeClass = (el, className) => {
 export const getDataAttributes = (el) => {
     const length = el.attributes.length
     const pattern = /^data-/
-    const data = {};
+    const data = {}
 
     //Loop all attributes and check for data-
     for (let i = 0; i < length; i++) {
-        const attribute = el.attributes[i];
+        const attribute = el.attributes[i]
 
         if(pattern.test(attribute.name)){
             const name = attribute.name.substr(5)
@@ -87,8 +87,8 @@ export const getDataAttributes = (el) => {
 
 export const on = (el, evnt, selector, func) => {
     el.addEventListener(evnt, (e) => {
-        let elem = e.target;
-        let match = false;
+        let elem = e.target
+        let match = false
 
         //Loop parents until match
         while (!match && elem !== el) {
@@ -111,9 +111,9 @@ export const on = (el, evnt, selector, func) => {
  */
 
 export const trigger = (el, e) => {
-    const event = document.createEvent('HTMLEvents');
-    event.initEvent(e, true, false);
-    el.dispatchEvent(event);
+    const event = document.createEvent('HTMLEvents')
+    event.initEvent(e, true, false)
+    el.dispatchEvent(event)
 }
 
 
@@ -122,5 +122,5 @@ export const trigger = (el, e) => {
  */
 
 export const regexcape = (str) => {
-    return str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&');
+    return str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
 }
