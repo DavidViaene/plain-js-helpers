@@ -4,6 +4,22 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 /**
+ * VANILLA JS HELPER LIBRARY
+ * ---------------------------
+ * Library containing vanilla JS helper functions instead of jQuery
+ */
+
+/**
+ * INSERT AFTER
+ */
+
+var insertAfter = exports.insertAfter = function insertAfter(el, target) {
+    if (target.parentNode) {
+        target.parentNode.insertBefore(el, target.nextSibling);
+    }
+};
+
+/**
  * HAS CLASS?
  * Checks if element has a given class
  */
