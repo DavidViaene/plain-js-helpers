@@ -11,6 +11,6 @@ gulp.task('default', () => {
     return b.bundle()
     .pipe(source('index.js')) //will convert text streams from browserify.bundle() to vinyl streams (gulp)
     .pipe(buffer()) //will convert streaming vinyl files to use buffer, some plugins need buffered vinyl objects
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('dist/'))
 })

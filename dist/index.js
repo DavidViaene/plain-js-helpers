@@ -1,1 +1,23 @@
-!function e(t,r,n){function s(i,o){if(!r[i]){if(!t[i]){var u="function"==typeof require&&require;if(!o&&u)return u(i,!0);if(a)return a(i,!0);var c=new Error("Cannot find module '"+i+"'");throw c.code="MODULE_NOT_FOUND",c}var f=r[i]={exports:{}};t[i][0].call(f.exports,function(e){var r=t[i][1][e];return s(r?r:e)},f,f.exports,e,t,r,n)}return r[i].exports}for(var a="function"==typeof require&&require,i=0;i<n.length;i++)s(n[i]);return s}({1:[function(e,t,r){"use strict";Object.defineProperty(r,"__esModule",{value:!0});r.insertAfter=function(e,t){t.parentNode&&t.parentNode.insertBefore(e,t.nextSibling)},r.hasClass=function(e,t){return e.classList?e.classList.contains(t):new RegExp("(^| )"+t+"( |$)","gi").test(e.className)},r.addClass=function(e,t){return e.classList?e.classList.add(t):e.className+=" "+t,e},r.removeClass=function(e,t){return e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp("(^|\\b)"+t.split(" ").join("|")+"(\\b|$)","gi")," "),e},r.getDataAttributes=function(e){for(var t=e.attributes.length,r=/^data-/,n={},s=0;s<t;s++){var a=e.attributes[s];if(r.test(a.name)){var i=a.name.substr(5),o=a.value;"true"==o||"false"==o?n[i]="true"==o:n[i]=o}}return n},r.on=function(e,t,r,n){e.addEventListener(t,function(t){for(var s=t.target,a=!1;!a&&s!==e;)s.matches(r)?a=s:s=s.parentNode;a&&n(t,a)})},r.trigger=function(e,t){var r=document.createEvent("HTMLEvents");r.initEvent(t,!0,!1),e.dispatchEvent(r)},r.regexcape=function(e){return e.replace(/[|\\{}()[\]^$+*?.]/g,"\\$&")}},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * VANILLA JS HELPER LIBRARY
+ * ---------------------------
+ * Library containing vanilla JS helper functions instead of jQuery
+ */
+
+/**
+ * INSERT AFTER
+ */
+
+var insertAfter = exports.insertAfter = function insertAfter(el, target) {
+  if (target.parentNode) {
+    target.parentNode.insertBefore(el, target.nextSibling);
+  }
+};
+
+},{}]},{},[1]);
