@@ -1,3 +1,5 @@
+import './polyfills'
+
 /**
  * VANILLA JS HELPER LIBRARY
  * ---------------------------

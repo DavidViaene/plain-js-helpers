@@ -3,6 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.regexcape = exports.trigger = exports.on = exports.getDataAttributes = exports.removeClass = exports.addClass = exports.hasClass = exports.insertAfter = undefined;
+
+require('./polyfills');
+
 /**
  * VANILLA JS HELPER LIBRARY
  * ---------------------------
